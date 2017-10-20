@@ -55,6 +55,17 @@ class AirportsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("in the segue")
+        if(segue.identifier=="showMap"){
+            if let destination = segue.destination as? MapViewController {
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    let selectedAirport = airports[indexPath.row]
+                    destination.selectedAirport = selectedAirport
+                }
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -10,15 +10,24 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
+    var selectedAirport: Airport?
+    var distance: Double?
     
     @IBOutlet weak var map: MKMapView!
     var coordinateArray = [CLLocationCoordinate2D]()
+    
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var LattLabel: UILabel!
+    @IBOutlet weak var LongLabel: UILabel!
+    @IBOutlet weak var DistanceTextLabel: UILabel!
+    @IBOutlet weak var DistanceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         map.delegate = self
         drawLine()
+        setValues()
         
     }
     
@@ -28,17 +37,27 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func drawLine(){
+        let endLat = Double((selectedAirport?.latitude)!)
+        let endLong = Double((selectedAirport?.longitude)!)
         
-        let startCoordinate = CLLocation(latitude: 51.5719, longitude: 4.7683)
-        let endCoordinate = CLLocation(latitude: -43.5320, longitude: 172.6362)
+        let startCoordinate = CLLocation(latitude: 52.3105, longitude: 4.7683 )
+        let endCoordinate = CLLocation(latitude: endLat!, longitude: endLong!)
         
         var array = [startCoordinate.coordinate, endCoordinate.coordinate]
-        
         // let polyline = MKPolyline(coordinates: array , count: 2)
         let geoline = MKGeodesicPolyline(coordinates: array, count: 2)
         
+        self.distance = startCoordinate.distance(from: endCoordinate)
         
         map.add(geoline)
+    }
+    
+    func setValues(){
+        self.DistanceTextLabel.text = "afstand "
+        self.NameLabel.text = selectedAirport?.name
+        self.LattLabel.text = selectedAirport?.latitude
+        self.LongLabel.text = selectedAirport?.longitude
+        self.DistanceLabel.text = "\(distance!)"
     }
     
     
