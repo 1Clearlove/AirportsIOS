@@ -17,13 +17,14 @@
 		972501881F9A077500D9DBD2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 972501871F9A077500D9DBD2 /* libsqlite3.tbd */; };
 		9725018C1F9A0EDC00D9DBD2 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725018B1F9A0EDC00D9DBD2 /* Airport.swift */; };
 		9725018E1F9A11D000D9DBD2 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725018D1F9A11D000D9DBD2 /* AirportTableViewCell.swift */; };
-		972501901F9A20DA00D9DBD2 /* airports.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 9725018F1F9A20DA00D9DBD2 /* airports.sqlite */; };
 		972501921F9A231C00D9DBD2 /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972501911F9A231C00D9DBD2 /* AirportDetailViewController.swift */; };
 		976452581F98E161008EFB2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976452571F98E161008EFB2D /* AppDelegate.swift */; };
 		9764525D1F98E161008EFB2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9764525B1F98E161008EFB2D /* Main.storyboard */; };
 		9764525F1F98E161008EFB2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9764525E1F98E161008EFB2D /* Assets.xcassets */; };
 		976452621F98E161008EFB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976452601F98E161008EFB2D /* LaunchScreen.storyboard */; };
 		9764526A1F98E5DB008EFB2D /* AirportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976452691F98E5DB008EFB2D /* AirportsTableViewController.swift */; };
+		99559B091F9A2D1800EA4A57 /* airports.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 99559B081F9A2D1800EA4A57 /* airports.sqlite */; };
+		99559B0B1F9A2D7000EA4A57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99559B0A1F9A2D7000EA4A57 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,6 @@
 		972501871F9A077500D9DBD2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9725018B1F9A0EDC00D9DBD2 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Airport.swift; path = Airport/Airport.swift; sourceTree = SOURCE_ROOT; };
 		9725018D1F9A11D000D9DBD2 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
-		9725018F1F9A20DA00D9DBD2 /* airports.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = airports.sqlite; path = ../../../Downloads/airports.sqlite; sourceTree = "<group>"; };
 		972501911F9A231C00D9DBD2 /* AirportDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
 		976452541F98E161008EFB2D /* Airport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		976452571F98E161008EFB2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		976452611F98E161008EFB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976452631F98E161008EFB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		976452691F98E5DB008EFB2D /* AirportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportsTableViewController.swift; sourceTree = "<group>"; };
+		99559B081F9A2D1800EA4A57 /* airports.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = airports.sqlite; path = ../../../Downloads/airports.sqlite; sourceTree = "<group>"; };
+		99559B0A1F9A2D7000EA4A57 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +118,7 @@
 		976452561F98E161008EFB2D /* Airport */ = {
 			isa = PBXGroup;
 			children = (
-				9725018F1F9A20DA00D9DBD2 /* airports.sqlite */,
+				99559B081F9A2D1800EA4A57 /* airports.sqlite */,
 				9725014C1F99E4A800D9DBD2 /* FMDB */,
 				9725018B1F9A0EDC00D9DBD2 /* Airport.swift */,
 				972501851F99FC6F00D9DBD2 /* DBManager.swift */,
@@ -128,6 +130,7 @@
 				9764525E1F98E161008EFB2D /* Assets.xcassets */,
 				976452601F98E161008EFB2D /* LaunchScreen.storyboard */,
 				976452631F98E161008EFB2D /* Info.plist */,
+				99559B0A1F9A2D7000EA4A57 /* MapViewController.swift */,
 			);
 			path = Airport;
 			sourceTree = "<group>";
@@ -192,7 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972501901F9A20DA00D9DBD2 /* airports.sqlite in Resources */,
+				99559B091F9A2D1800EA4A57 /* airports.sqlite in Resources */,
 				976452621F98E161008EFB2D /* LaunchScreen.storyboard in Resources */,
 				9764525F1F98E161008EFB2D /* Assets.xcassets in Resources */,
 				9764525D1F98E161008EFB2D /* Main.storyboard in Resources */,
@@ -213,6 +216,7 @@
 				972501781F99E5FB00D9DBD2 /* FMDatabasePool.m in Sources */,
 				9725017F1F99E61800D9DBD2 /* FMResultSet.m in Sources */,
 				976452581F98E161008EFB2D /* AppDelegate.swift in Sources */,
+				99559B0B1F9A2D7000EA4A57 /* MapViewController.swift in Sources */,
 				9725018E1F9A11D000D9DBD2 /* AirportTableViewCell.swift in Sources */,
 				972501751F99E5F000D9DBD2 /* FMDatabaseAdditions.m in Sources */,
 				972501921F9A231C00D9DBD2 /* AirportDetailViewController.swift in Sources */,
